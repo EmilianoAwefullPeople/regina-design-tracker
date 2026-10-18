@@ -191,7 +191,8 @@
       : "";
     $("detailMedia").classList.toggle("is-ref", isRef);
     $("detailMedia").innerHTML = imgs.length
-      ? `${refBanner}<div class="main"><img src="designs/${esc(imgs[variantIndex])}" alt="${esc(d.name)}${imgs.length > 1 ? ", image " + (variantIndex + 1) : ""}"></div>
+      ? `${refBanner}<div class="main-wrap"><div class="main"><img src="designs/${esc(imgs[variantIndex])}" alt="${esc(d.name)}${imgs.length > 1 ? ", image " + (variantIndex + 1) : ""}"></div>
+         ${imgs.length > 1 ? `<button class="img-nav prev" data-step="-1" aria-label="Previous image">‹</button><button class="img-nav next" data-step="1" aria-label="Next image">›</button><span class="img-count">${variantIndex + 1} / ${imgs.length}</span>` : ""}</div>
          ${imgs.length > 1 ? `<div class="thumbs">${imgs.map((src, i) =>
             `<button data-variant="${i}" class="${i === variantIndex ? "active" : ""}" aria-label="Variant ${i + 1}"><img src="designs/${esc(src)}" alt=""></button>`).join("")}</div>` : ""}`
       : `<div class="main placeholder"><div class="placeholder-inner"><div class="pid">${esc(label(d))}</div><div class="ptxt">Not delivered yet</div></div></div>`;
@@ -200,6 +201,11 @@
     $("nextItem").disabled = openIndex === visible.length - 1;
     $("prevItem").style.visibility = openIndex === 0 ? "hidden" : "";
     $("nextItem").style.visibility = openIndex === visible.length - 1 ? "hidden" : "";
+  }
+
+  function mediaCount() {
+    const d = visible[openIndex];
+    return (d.images || []).length || (d.refs || []).length || 1;
   }
 
   function step(delta) {
@@ -251,9 +257,11 @@
     if (card) openDetail(card.dataset.id);
   });
   $("detailMedia").addEventListener("click", e => {
+    const nav = e.target.closest("[data-step]");
     const b = e.target.closest("[data-variant]");
-    if (!b) return;
-    variantIndex = Number(b.dataset.variant);
+    if (!nav && !b) return;
+    if (nav) variantIndex = (variantIndex + Number(nav.dataset.step) + mediaCount()) % mediaCount();
+    else variantIndex = Number(b.dataset.variant);
     fillDetail();
   });
   $("closeDetail").addEventListener("click", () => dialog.close());
