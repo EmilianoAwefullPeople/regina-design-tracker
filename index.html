@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regina's Design Tracker · Journey Onward</title>
+  <meta name="description" content="Progress tracker for Regina's Journey Onward design sprint: postcards, trip recap slides and the format 3 proposal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <p class="kicker">Journey Onward · Design Sprint</p>
+      <h1>Regina's Design Tracker</h1>
+      <p class="sub">Every postcard, recap slide and proposal in the sprint: what's done, what's still pending.</p>
+      <p class="updated" id="updated"></p>
+    </header>
+
+    <section class="overview" aria-label="Progress">
+      <div class="overview-main">
+        <div class="big-number"><span id="pct">0</span><span class="pct-sign">%</span></div>
+        <div class="overview-text">
+          <p class="overview-label"><strong id="doneCount">0</strong> of <strong id="totalCount">0</strong> designs done</p>
+          <div class="bar bar-lg" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="mainBar">
+            <div class="bar-fill" id="mainFill"></div>
+          </div>
+          <p class="overview-legend">
+            <span class="dot dot-done"></span> Done <span id="legendDone"></span>
+            <span class="dot dot-pending"></span> Pending <span id="legendPending"></span>
+          </p>
+          <div class="source-row">
+            <p class="source-label">
+              <span class="dot dot-src"></span>
+              Figma / Adobe file delivered: <strong id="srcCount">0</strong> of <strong id="srcTotal">0</strong> done designs
+            </p>
+            <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="srcBar">
+              <div class="bar-fill bar-fill-src" id="srcFill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group-stats" id="groupStats"></div>
+    </section>
+
+    <nav class="toolbar" aria-label="Filters">
+      <div class="tabs" id="groupTabs" role="tablist"></div>
+      <div class="toolbar-right">
+        <div class="segmented" id="statusFilter">
+          <button data-status="all" class="active">All</button>
+          <button data-status="done">Done</button>
+          <button data-status="pending">Pending</button>
+        </div>
+        <label class="search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4"/></svg>
+          <input type="search" id="search" placeholder="Search designs" autocomplete="off">
+        </label>
+        <div class="segmented" id="viewToggle">
+          <button data-view="gallery" class="active" title="Gallery view">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="11" y="3" width="6" height="6" rx="1"/><rect x="3" y="11" width="6" height="6" rx="1"/><rect x="11" y="11" width="6" height="6" rx="1"/></svg>
+            Gallery
+          </button>
+          <button data-view="board" title="Board view">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="6" height="14" rx="1"/><rect x="11" y="3" width="6" height="9" rx="1"/></svg>
+            Board
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content"></main>
+
+    <footer class="footer">
+      Journey Onward · AweFull People
+    </footer>
+  </div>
+
+  <dialog id="detail" aria-labelledby="detailTitle">
+    <button class="close" id="closeDetail" aria-label="Close">×</button>
+    <div class="detail-grid">
+      <div class="detail-media" id="detailMedia"></div>
+      <div class="detail-info">
+        <p class="detail-id" id="detailId"></p>
+        <h2 id="detailTitle"></h2>
+        <dl class="props">
+          <dt>Status</dt><dd id="detailStatus"></dd>
+          <dt>Section</dt><dd id="detailGroup"></dd>
+          <dt>Type</dt><dd id="detailType"></dd>
+          <dt>Variants</dt><dd id="detailVariants"></dd>
+          <dt>Source file</dt><dd id="detailSource"></dd>
+        </dl>
+        <div class="detail-spec" id="detailSpec"></div>
+        <div class="detail-notes" id="detailNotes"></div>
+        <div class="detail-nav">
+          <button id="prevItem">← Previous</button>
+          <button id="nextItem">Next →</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
