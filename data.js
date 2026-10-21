@@ -6,7 +6,7 @@
 // shown faded until the real design arrives.
 
 window.TRACKER = {
-  updated: "2026-10-18",
+  updated: "2026-10-21",
 
 
   groups: [
@@ -76,7 +76,7 @@ window.TRACKER = {
       notes: "A third passport-stamp variant." },
     { id: "28", group: "postcards", type: "Sticker / overlay", name: "Location sticker", status: "pending", refs: [{ src: "postcard-refs/L28a.jpg", kind: "wireframe", caption: "Pill sticker with a pin icon, close to the Instagram location sticker. Regina is free to design whichever version she likes." }, { src: "postcard-refs/L28b.jpg", kind: "wireframe", caption: "Speech-bubble pin: “You were here” + place, altitude and country. Regina is free to design whichever version she likes." }, { src: "postcard-refs/L28c.jpg", kind: "wireframe", caption: "Bordered tag sticker: place name + town and country. Regina is free to design whichever version she likes." }],
       notes: "Shows location. Loosely inspired by the Instagram Stories location sticker, with its own look." },
-    { id: "29", group: "postcards", type: "Sticker / overlay", name: "Date sticker", status: "pending", refs: [{ src: "postcard-refs/D29a.jpg", kind: "wireframe", caption: "Tear-off calendar page. Regina is free to design whichever version she likes." }, { src: "postcard-refs/D29b.jpg", kind: "wireframe", caption: "Split-flap style blocks for day, month and year, with weekday and time. Regina is free to design whichever version she likes." }],
+    { id: "29", group: "postcards", type: "Sticker / overlay", name: "Date sticker", status: "done", images: ["p29.jpg"],
       notes: "Shows the date, styled as its own small block rather than plain text." },
     { id: "30", group: "postcards", type: "Extended template", name: "Expanded template (base #9)", status: "pending", refs: [{ src: "postcard-refs/E30.jpg", kind: "wireframe", caption: "Expanded #9: data row and barcode on top, footer title, photos stay as in #9. Regina is free to design whichever version she likes." }, { src: "p09.jpg", caption: "Base design #9 (delivered)" }, { src: "references/expanded-sublime.jpg", caption: "Inspiration: “Sublime” poster, margin/border concept" }, { src: "references/expanded-summit.jpg", caption: "Inspiration: “Summit” poster, margin/border concept" }, { src: "references/expanded-forests.jpg", caption: "Inspiration: vintage poster, framed border with side info" }, { src: "references/expanded-postcard.jpg", caption: "Inspiration: vintage postcard, message + stamp area" }],
       notes: "Expanded version of #9 (3 columns of photos): same design with margins added so more info can sit around the photos." },
