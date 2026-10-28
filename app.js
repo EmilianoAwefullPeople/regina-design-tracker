@@ -67,7 +67,7 @@
     const refs = d.refs || [];
     let cover;
     if (imgs.length) {
-      cover = `<div class="cover"><img src="designs/${esc(imgs[0])}" alt="${esc(d.name)}" loading="lazy">${imgs.length > 1 ? `<span class="variants">${imgs.length} variants</span>` : ""}${d.sourceFile ? `<span class="file-badge">Figma file</span>` : ""}</div>`;
+      cover = `<div class="cover"><img src="designs/${esc(imgs[0])}" alt="${esc(d.name)}" loading="lazy">${imgs.length > 1 ? `<span class="variants">${imgs.length} variants</span>` : ""}${d.sourceFile ? `<span class="file-badge">Source file</span>` : ""}</div>`;
     } else if (refs.length) {
       cover = `<div class="cover ref"><img src="designs/${esc(refs[0].src)}" alt="Reference for ${esc(d.name)}" loading="lazy">
         <span class="ref-badge">Reference</span>${refs.length > 1 ? `<span class="variants">${refs.length} refs</span>` : ""}</div>`;

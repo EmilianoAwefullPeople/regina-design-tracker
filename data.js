@@ -6,7 +6,7 @@
 // shown faded until the real design arrives.
 
 window.TRACKER = {
-  updated: "2026-10-22",
+  updated: "2026-10-28",
 
 
   groups: [
@@ -91,15 +91,16 @@ window.TRACKER = {
 
     // ── Trip recap slides ────────────────────────────────────────
     // `spec` rows come from the Trip Recap slide spec (Appendix C of the brief).
-    { id: "R1",  group: "recap", type: "Cover", name: "Cover v1: trip photo as full background", status: "pending", refs: [{ src: "wireframes/R1.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+    { id: "R1",  group: "recap", type: "Cover", name: "Cover v1: trip photo as full background", sourceFile: true, status: "done", images: ["r01.jpg"], refs: [{ src: "wireframes/R1.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The opening slide of the recap. Sets the trip title and dates before the story starts."],
         ["Layout", "A real trip photo fills the whole 1080 × 1920 slide as the background."],
         ["Content", "Trip title and trip dates."],
         ["Appears", "Once per trip."],
         ["Extra", "This is a starting idea. A third Cover direction is welcome if Regina sees a better one."]
-      ] },
-    { id: "R2",  group: "recap", type: "Cover", name: "Cover v2: gradient / abstract color background", status: "pending", refs: [{ src: "wireframes/R2.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Delivered with a View-Master reel of trip photos over a full photo background, with the dates, title and a \"let's go\" prompt." },
+    { id: "R2",  group: "recap", type: "Cover", name: "Cover v2: gradient / abstract color background", sourceFile: true, status: "done", images: ["r02.jpg"], refs: [{ src: "wireframes/R2.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The opening slide of the recap. Sets the trip title and dates before the story starts."],
         ["Layout", "A gradient or abstract color background instead of a photo."],
@@ -107,39 +108,44 @@ window.TRACKER = {
         ["Content", "Trip title and trip dates."],
         ["Appears", "Once per trip."],
         ["Extra", "This is a starting idea. A third Cover direction is welcome if Regina sees a better one."]
-      ] },
-    { id: "R3",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v1: 1 photo full-bleed, text overlaid", status: "pending", refs: [{ src: "wireframes/R3.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Delivered with a blurred trip photo as the background instead of a gradient, so this version still needs at least one photo." },
+    { id: "R3",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v1: 1 photo full-bleed, text overlaid", sourceFile: true, status: "done", images: ["r03.jpg"], refs: [{ src: "wireframes/R3.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The core, repeating slide. Tells the mini-story of one grouped experience the AI found in the trip media (e.g. “your 6-hour hike”)."],
         ["Layout", "One photo, full-bleed, with the text overlaid on top of it."],
         ["Content", "A short title, a one-line caption and the photo."],
         ["Appears", "Many times per trip. How many depends on how many “memories” the app finds in the user's media."],
         ["Set", "The most minimal of 5 Memory Chapter versions, which scale from minimal to media-rich."]
-      ] },
-    { id: "R4",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v2: 1 photo inset, text beside or below", status: "pending", refs: [{ src: "wireframes/R4.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Yellow frame over a full-bleed photo; the title and date sit in a tab in the frame's top corner, with a Journey Onward footer." },
+    { id: "R4",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v2: 1 photo inset, text beside or below", sourceFile: true, status: "done", images: ["r04.jpg"], refs: [{ src: "wireframes/R4.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The core, repeating slide. Tells the mini-story of one grouped experience the AI found in the trip media (e.g. “your 6-hour hike”)."],
         ["Layout", "One photo, smaller / inset. The text sits in the empty space beside or below it."],
         ["Content", "A short title, a one-line caption and the photo."],
         ["Appears", "Many times per trip. How many depends on how many “memories” the app finds in the user's media."],
         ["Set", "Version 2 of 5. The versions scale from minimal to media-rich."]
-      ] },
-    { id: "R5",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v3: 2 photos side by side, text below", status: "pending", refs: [{ src: "wireframes/R5.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Photo on the top half and a color block below, with a MEMORY label (date and time) and the title. Circle cut-outs connect the two halves." },
+    { id: "R5",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v3: 2 photos side by side, text below", sourceFile: true, status: "done", images: ["r05.jpg"], refs: [{ src: "wireframes/R5.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The core, repeating slide. Tells the mini-story of one grouped experience the AI found in the trip media (e.g. “your 6-hour hike”)."],
         ["Layout", "Two photos side by side, with the text below them."],
         ["Content", "A short title, a one-line caption and 2 photos."],
         ["Appears", "Many times per trip. How many depends on how many “memories” the app finds in the user's media."],
         ["Set", "Version 3 of 5. The versions scale from minimal to media-rich."]
-      ] },
-    { id: "R6",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v4: 3 photos (1 large + 2 small), text above", status: "pending", refs: [{ src: "wireframes/R6.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Two tilted framed photos over a background photo, with the duration, place and date below." },
+    { id: "R6",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v4: 3 photos (1 large + 2 small), text above", sourceFile: true, status: "done", images: ["r06.jpg"], refs: [{ src: "wireframes/R6.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The core, repeating slide. Tells the mini-story of one grouped experience the AI found in the trip media (e.g. “your 6-hour hike”)."],
         ["Layout", "Three photos: one large and two small, with the text above them."],
         ["Content", "A short title, a one-line caption and 3 photos."],
         ["Appears", "Many times per trip. How many depends on how many “memories” the app finds in the user's media."],
         ["Set", "Version 4 of 5. The versions scale from minimal to media-rich."]
-      ] },
+      ],
+      notes: "Large quoted title above three tilted photos (one large, two small), with the country at the bottom." },
     { id: "R7",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v5: 4+ photos grid/collage, caption bar", status: "pending", refs: [{ src: "wireframes/R7.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The core, repeating slide. Tells the mini-story of one grouped experience the AI found in the trip media (e.g. “your 6-hour hike”)."],
@@ -148,22 +154,24 @@ window.TRACKER = {
         ["Appears", "Many times per trip. How many depends on how many “memories” the app finds in the user's media."],
         ["Set", "The most media-rich of the 5 Memory Chapter versions."]
       ] },
-    { id: "R8",  group: "recap", type: "Thematic", name: "Thematic v1: 2 photos side by side, text below", status: "pending", refs: [{ src: "wireframes/R8.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+    { id: "R8",  group: "recap", type: "Thematic", name: "Thematic v1: 2 photos side by side, text below", sourceFile: true, status: "done", images: ["r08.jpg"], refs: [{ src: "wireframes/R8.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "Groups photos by what they have in common: a place, an activity, an object or a picture style (e.g. “your coffee stops”, “your days at the beach”)."],
         ["Layout", "Two photos side by side, with the text below them."],
         ["Content", "A short title, a one-line caption and 2 photos."],
         ["Appears", "Can repeat several times per trip, depending on how many patterns the trip produces."],
         ["Set", "Uses the same image-count and text-position logic as the matching Memory Chapter layout."]
-      ] },
-    { id: "R9",  group: "recap", type: "Thematic", name: "Thematic v2: 3 photos (1 large + 2 small), text above", status: "pending", refs: [{ src: "wireframes/R9.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Two photos stacked, with the title, a landmark name and the area in color bands between them." },
+    { id: "R9",  group: "recap", type: "Thematic", name: "Thematic v2: 3 photos (1 large + 2 small), text above", sourceFile: true, status: "done", images: ["r09.jpg"], refs: [{ src: "wireframes/R9.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "Groups photos by what they have in common: a place, an activity, an object or a picture style (e.g. “your coffee stops”, “your days at the beach”)."],
         ["Layout", "Three photos: one large and two small, with the text above them."],
         ["Content", "A short title, a one-line caption and 3 photos."],
         ["Appears", "Can repeat several times per trip, depending on how many patterns the trip produces."],
         ["Set", "Uses the same image-count and text-position logic as the matching Memory Chapter layout."]
-      ] },
+      ],
+      notes: "2 × 2 grid: three photos plus one color block holding the dates and title." },
     { id: "R10", group: "recap", type: "Thematic", name: "Thematic v3: 4+ photos grid/collage, caption bar", status: "pending", refs: [{ src: "wireframes/R10.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "Groups photos by what they have in common: a place, an activity, an object or a picture style (e.g. “your coffee stops”, “your days at the beach”)."],
@@ -195,13 +203,14 @@ window.TRACKER = {
         ["Appears", "Once per trip."],
         ["Extra", "This is a starting idea. A third Closing direction is welcome if Regina has a better one."]
       ] },
-    { id: "R14", group: "recap", type: "Closing / Share", name: "Closing v2: photo collage background", status: "pending", refs: [{ src: "wireframes/R14.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+    { id: "R14", group: "recap", type: "Closing / Share", name: "Closing v2: photo collage background", sourceFile: true, status: "done", images: ["r14.jpg"], refs: [{ src: "wireframes/R14.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The final slide. Wraps up the recap and gives the user a way to share it."],
         ["Layout", "A photo collage in the background."],
         ["Appears", "Once per trip."],
         ["Extra", "This is a starting idea. A third Closing direction is welcome if Regina has a better one."]
-      ] },
+      ],
+      notes: "Four-photo collage background with a framed photo in the center; the frame carries the place, \"5 days recap\" and the dates." },
 
     // ── Format 3 ─────────────────────────────────────────────────
     { id: "F3", group: "format3", type: "Proposal", name: "Shareable format 3 proposal", status: "pending",
