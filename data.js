@@ -6,7 +6,7 @@
 // shown faded until the real design arrives.
 
 window.TRACKER = {
-  updated: "2026-10-28",
+  updated: "2026-11-01",
 
 
   groups: [
@@ -144,14 +144,15 @@ window.TRACKER = {
         ["Set", "Version 4 of 5. The versions scale from minimal to media-rich."]
       ],
       notes: "Large quoted title above three tilted photos (one large, two small), with the country at the bottom." },
-    { id: "R7",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v5: 4+ photos grid/collage, caption bar", status: "pending", refs: [{ src: "wireframes/R7.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+    { id: "R7",  group: "recap", type: "Memory Chapter", name: "Memory Chapter v5: 4+ photos grid/collage, caption bar", sourceFile: true, status: "done", images: ["r07.jpg"], refs: [{ src: "wireframes/R7.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The core, repeating slide. Tells the mini-story of one grouped experience the AI found in the trip media (e.g. “your 6-hour hike”)."],
         ["Layout", "Four or more photos in a grid or collage, with the text as a caption bar."],
         ["Content", "A short title, a one-line caption and 4+ photos."],
         ["Appears", "Many times per trip. How many depends on how many “memories” the app finds in the user's media."],
         ["Set", "The most media-rich of the 5 Memory Chapter versions."]
-      ] },
+      ],
+      notes: "One large photo with three framed photos stacked down the right side, with \"your saturday walk\" and the area name as the title." },
     { id: "R8",  group: "recap", type: "Thematic", name: "Thematic v1: 2 photos side by side, text below", sourceFile: true, status: "done", images: ["r08.jpg"], refs: [{ src: "wireframes/R8.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "Groups photos by what they have in common: a place, an activity, an object or a picture style (e.g. “your coffee stops”, “your days at the beach”)."],
@@ -170,37 +171,41 @@ window.TRACKER = {
         ["Set", "Uses the same image-count and text-position logic as the matching Memory Chapter layout."]
       ],
       notes: "2 × 2 grid: three photos plus one color block holding the dates and title." },
-    { id: "R10", group: "recap", type: "Thematic", name: "Thematic v3: 4+ photos grid/collage, caption bar", status: "pending", refs: [{ src: "wireframes/R10.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+    { id: "R10", group: "recap", type: "Thematic", name: "Thematic v3: 4+ photos grid/collage, caption bar", sourceFile: true, status: "done", images: ["r10.jpg"], refs: [{ src: "wireframes/R10.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "Groups photos by what they have in common: a place, an activity, an object or a picture style (e.g. “your coffee stops”, “your days at the beach”)."],
         ["Layout", "Four or more photos in a grid or collage, with the text as a caption bar."],
         ["Content", "A short title, a one-line caption and 4+ photos."],
         ["Appears", "Can repeat several times per trip, depending on how many patterns the trip produces."],
         ["Set", "Uses the same image-count and text-position logic as the matching Memory Chapter layout."]
-      ] },
-    { id: "R11", group: "recap", type: "Data Visualization", name: "Data Visualization v1: with supporting photo", status: "pending", refs: [{ src: "wireframes/R11.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Six photos cropped into circles on a 2 × 3 grid over a solid color, with the theme and city as the title." },
+    { id: "R11", group: "recap", type: "Data Visualization", name: "Data Visualization v1: with supporting photo", sourceFile: true, status: "done", images: ["r11.jpg"], refs: [{ src: "wireframes/R11.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "Short stat, chart or list slides that break up the story rhythm between chapters."],
         ["Layout", "Master layout with a supporting photo next to the data."],
         ["Data it must hold", "Weather, temperature, altitude, and number / list of places visited. One layout has to flexibly hold any of these, not one design per data type."],
         ["Scope", "Design the container the data sits in. The data itself (e.g. a map or chart) is built in code."],
         ["Set", "1 of 2 Data Visualization designs in total."]
-      ] },
-    { id: "R12", group: "recap", type: "Data Visualization", name: "Data Visualization v2: no photo (text / number / chart)", status: "pending", refs: [{ src: "wireframes/R12.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Full-bleed photo with the weather data on top: icon, temperature, season, conditions, place and coordinates." },
+    { id: "R12", group: "recap", type: "Data Visualization", name: "Data Visualization v2: no photo (text / number / chart)", sourceFile: true, status: "done", images: ["r12.jpg"], refs: [{ src: "wireframes/R12.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "Short stat, chart or list slides that break up the story rhythm between chapters."],
         ["Layout", "Master layout without a photo: text, number or chart only."],
         ["Data it must hold", "Weather, temperature, altitude, and number / list of places visited. One layout has to flexibly hold any of these, not one design per data type."],
         ["Scope", "Design the container the data sits in. The data itself (e.g. a map or chart) is built in code."],
         ["Set", "2 of 2 Data Visualization designs in total."]
-      ] },
-    { id: "R13", group: "recap", type: "Closing / Share", name: "Closing v1: minimal branded screen", status: "pending", refs: [{ src: "wireframes/R13.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
+      ],
+      notes: "Tinted photo background with a big count (\"5 tourist points\") and a numbered list of the places in white bars. Uses a photo, so it's a looser fit for the no-photo slot." },
+    { id: "R13", group: "recap", type: "Closing / Share", name: "Closing v1: minimal branded screen", sourceFile: true, status: "done", images: ["r13.jpg"], refs: [{ src: "wireframes/R13.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The final slide. Wraps up the recap and gives the user a way to share it."],
         ["Layout", "A minimal, branded closing screen."],
         ["Appears", "Once per trip."],
         ["Extra", "This is a starting idea. A third Closing direction is welcome if Regina has a better one."]
-      ] },
+      ],
+      notes: "Photo in the center of a perspective \"tunnel\", with the closing title above, the dates on the sides and the month and year below. The perspective type is raster in the source file." },
     { id: "R14", group: "recap", type: "Closing / Share", name: "Closing v2: photo collage background", sourceFile: true, status: "done", images: ["r14.jpg"], refs: [{ src: "wireframes/R14.jpg", kind: "wireframe", caption: "Made with a sample trip (Zurich 2026) to show the idea. Regina is free to create whichever version she likes: layout, type, shapes and styling are her call." }],
       spec: [
         ["Purpose", "The final slide. Wraps up the recap and gives the user a way to share it."],
