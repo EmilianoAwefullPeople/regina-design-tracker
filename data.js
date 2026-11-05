@@ -6,7 +6,7 @@
 // shown faded until the real design arrives.
 
 window.TRACKER = {
-  updated: "2026-11-01",
+  updated: "2026-11-05",
 
 
   groups: [
@@ -216,7 +216,12 @@ window.TRACKER = {
       notes: "Four-photo collage background with a framed photo in the center; the frame carries the place, \"5 days recap\" and the dates." },
 
     // ── Format 3 ─────────────────────────────────────────────────
-    { id: "F3", group: "format3", type: "Proposal", name: "Shareable format 3 proposal", status: "pending",
-      notes: "One example using sample images and data, plus a short text breakdown: what the format is, how it works in the app, and why it differs from postcards and the trip recap." }
+    { id: "F3", group: "format3", type: "Proposal", name: "Shareable format 3 proposal", sourceFile: true, status: "done", images: ["f3.jpg"], refs: [{ src: "format3-refs/F3ex1.jpg", caption: "Reference: dense dot grid infographic, used as a direction reference for this format." }, { src: "format3-refs/F3ex2.jpg", caption: "Reference: percentage breakdown shown as rows of icons, used as a direction reference for this format." }, { src: "format3-refs/F3ex3.jpg", caption: "Reference: side-by-side dot comparison chart, used as a direction reference for this format." }],
+      spec: [
+        ["What it is", "A data visualization system that graphically represents the composition of a trip based on the experiences the user recorded."],
+        ["How it works", "Patterns are identified across the trip's activities, places and experiences, then organized and classified into genres or categories. A percentage-based metric is set for what proportion of the trip belongs to each category."],
+        ["Goal", "Turn the trip records into a visual representation that lets users explore, compare and interpret the composition of their journey through the collected data."]
+      ],
+      notes: "Delivered as a dot map of the sample trip (UK), with a legend of trip categories (km traveled, places with water, festivals attended, new people met, car rides, new places to eat, train rides, night clubs, historic points visited) each shown as a percentage of the trip." }
   ]
 };
