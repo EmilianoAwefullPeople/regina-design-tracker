@@ -26,10 +26,11 @@
     $("legendDone").textContent = done;
     $("legendPending").textContent = total - done;
     $("mainBar").setAttribute("aria-valuenow", p);
-    const withFile = designs.filter(d => isDone(d) && d.sourceFile).length;
-    const ps = pct(withFile, done);
+    const needsFile = designs.filter(d => isDone(d) && d.sourceFile !== "n/a").length;
+    const withFile = designs.filter(d => isDone(d) && d.sourceFile === true).length;
+    const ps = pct(withFile, needsFile);
     $("srcCount").textContent = withFile;
-    $("srcTotal").textContent = done;
+    $("srcTotal").textContent = needsFile;
     $("srcBar").setAttribute("aria-valuenow", ps);
     requestAnimationFrame(() => {
       $("mainFill").style.width = p + "%";
@@ -67,7 +68,7 @@
     const refs = d.refs || [];
     let cover;
     if (imgs.length) {
-      cover = `<div class="cover"><img src="designs/${esc(imgs[0])}" alt="${esc(d.name)}" loading="lazy">${imgs.length > 1 ? `<span class="variants">${imgs.length} variants</span>` : ""}${d.sourceFile ? `<span class="file-badge">Source file</span>` : ""}</div>`;
+      cover = `<div class="cover"><img src="designs/${esc(imgs[0])}" alt="${esc(d.name)}" loading="lazy">${imgs.length > 1 ? `<span class="variants">${imgs.length} variants</span>` : ""}${d.sourceFile === true ? `<span class="file-badge">Source file</span>` : ""}</div>`;
     } else if (refs.length) {
       cover = `<div class="cover ref"><img src="designs/${esc(refs[0].src)}" alt="Reference for ${esc(d.name)}" loading="lazy">
         <span class="ref-badge">Reference</span>${refs.length > 1 ? `<span class="variants">${refs.length} refs</span>` : ""}</div>`;
@@ -166,9 +167,11 @@
     $("detailVariants").textContent = !isRef && imgs.length ? imgs.length : "—";
     $("detailSource").innerHTML = !isDone(d)
       ? `<span class="muted">Not yet (design pending)</span>`
-      : d.sourceFile
-        ? `<span class="file-ok">Figma / Adobe file delivered</span>`
-        : `<span class="muted">Image only, file not delivered yet</span>`;
+      : d.sourceFile === "n/a"
+        ? `<span class="muted">Not needed for this design</span>`
+        : d.sourceFile
+          ? `<span class="file-ok">Figma / Adobe file delivered</span>`
+          : `<span class="muted">Image only, file not delivered yet</span>`;
     $("detailNotes").innerHTML = d.notes ? `<h3>Design notes</h3><p>${esc(d.notes)}</p>` : "";
     $("detailNotes").hidden = !d.notes;
 
